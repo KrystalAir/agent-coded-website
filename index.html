@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="從日常穿搭、性格與價值取向，找出最接近你風格的時裝屋。">
+  <title>The Style Index｜你是哪個時裝屋？</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/questions.js"></script>
+  <script defer src="js/houses.js"></script>
+  <script defer src="js/house-photos.js"></script>
+  <script defer src="js/matching.js"></script>
+  <script defer src="js/quiz.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="masthead">
+      <a class="wordmark" href="./index.html">The Style Index<span aria-hidden="true"> ✦</span></a>
+      <p>Fashion House Quiz</p>
+    </header>
+
+    <main>
+      <noscript><p>請啟用 JavaScript 以開始作答。</p></noscript>
+
+      <section id="welcome" class="welcome" aria-labelledby="welcome-title">
+        <div class="welcome-copy">
+          <div class="ornament" aria-hidden="true">✦</div>
+          <h1 id="welcome-title">你的穿搭，<br><span>像哪個時裝屋？</span></h1>
+          <p class="intro">從衣櫃裡反覆穿的那件衣服，到你希望別人怎麼記得你。用日常的選擇，找到和你最接近的時裝屋。</p>
+          <div class="welcome-actions">
+            <button class="button primary" type="button" id="start">開始測驗 <span aria-hidden="true">↗</span></button>
+            <p id="quiz-summary" class="quiz-summary"></p>
+          </div>
+        </div>
+        <figure class="cover">
+          <div class="cover-frame">
+            <img src="assets/versailles.jpg" width="1280" height="850" alt="凡爾賽宮鏡廳，陽光照進吊燈與金飾排列的長廊">
+          </div>
+          <figcaption>
+            <a href="https://commons.wikimedia.org/wiki/File:Chateau_Versailles_Galerie_des_Glaces.jpg" target="_blank" rel="noopener noreferrer">凡爾賽宮鏡廳 · Myrabella / Wikimedia Commons</a>
+            · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> · 版面裁切
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="quiz" class="quiz" hidden aria-labelledby="question">
+        <div class="progress-header">
+          <p id="category"></p>
+          <p id="progress-text"></p>
+        </div>
+        <progress id="progress" aria-labelledby="progress-text"></progress>
+        <h1 id="question" tabindex="-1"></h1>
+        <form id="quiz-form">
+          <fieldset aria-labelledby="question">
+            <div id="options" class="options"></div>
+          </fieldset>
+          <div class="quiz-actions">
+            <button class="button secondary" type="button" id="previous">← 上一題</button>
+            <button class="button primary" type="submit" id="next">下一題 <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result" class="result" hidden aria-labelledby="result-house">
+        <div class="result-heading">
+          <div class="ornament" aria-hidden="true">✦</div>
+          <p class="result-subtitle">你的 Fashion House</p>
+          <h1 id="result-house" tabindex="-1"></h1>
+          <p id="result-label" class="result-label"></p>
+        </div>
+        <figure class="result-portrait">
+          <div class="portrait-frame" id="portrait-frame" aria-busy="false">
+            <img id="result-photo" alt="" decoding="async" referrerpolicy="no-referrer" hidden>
+            <p id="photo-status" role="status" hidden></p>
+          </div>
+          <figcaption>
+            <a id="photo-source" target="_blank" rel="noopener noreferrer"></a>
+            <span id="photo-credit"></span>
+          </figcaption>
+        </figure>
+        <div class="result-copy">
+          <p id="result-description" class="result-description"></p>
+          <div id="evidence-section" class="result-section" hidden>
+            <h2>你的答案透露了什麼？</h2>
+            <ul id="evidence-list" class="evidence-list"></ul>
+          </div>
+          <p id="close-note" class="close-note" hidden>這次有幾種風格很接近，結果反映整輪回答的整體傾向。</p>
+          <div class="result-section">
+            <h2>從衣櫃開始試試</h2>
+            <p id="result-tip"></p>
+          </div>
+          <button class="button secondary" type="button" id="restart">重新測驗 <span aria-hidden="true">↺</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><p>時裝屋風格配對 · 個人課程專案</p></footer>
+  </div>
+</body>
+</html>
